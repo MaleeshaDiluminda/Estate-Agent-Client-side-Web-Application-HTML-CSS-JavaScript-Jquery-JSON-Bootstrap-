@@ -1,0 +1,931 @@
+:root {
+    --dark: linear-gradient(to right, #676262 0%, #000000 70%);
+    /*------------------green animation line under navigation links--------------------*/
+    --transition: all 0.3s ease;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.datePicker {
+    padding-left: 350px;
+    border-color: greenyellow;
+}
+
+body {
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 16px 0;
+}
+
+
+/*------------------buttons-etc------------------*/
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.button {
+    background: #ddff00;
+    border: none;
+    display: block;
+    width: 140px;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    background: linear-gradient(to left, #54e807 0%, #dbff00 50%);
+    font-size: 16px;
+    padding: 12px;
+    border: 0px solid black;
+    border-radius: 15px;
+    margin: 15px;
+    transition: var(--transition);
+}
+
+.button:hover {
+    background: linear-gradient(to right, #54e807 0%, #dbff00 50%);
+    color: black;
+}
+
+
+/*----------------------------Header-----------------------------*/
+
+.header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("images/A20.jpg") center/cover no-repeat;
+    color: #ddff00;
+}
+
+.navigationTop a {
+    color: #ddff00;
+}
+
+.navigationLogo {
+    background: #000;
+    position: relative;
+    z-index: 999;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 15px 25px;
+    color: var(--white);
+}
+
+.rmLogo {
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.navbutton {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.navbutton:hover {
+    background: #fff;
+    color: #000;
+    transition: var(--transition);
+}
+
+.navigationTop {
+    background: #000;
+    transform: translateY(-600px);
+    transition: var(--transition);
+}
+
+.showNav {
+    transform: translateY(0);
+}
+
+.searchButton {
+    display: none;
+}
+
+.navigationTop ul li {
+    padding: 10px 0;
+}
+
+.navigationTop ul a {
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+}
+
+.navigationTop ul a::after {
+    content: "";
+    height: 2px;
+    background: linear-gradient(to left, #54e807 0%, #dbff00 50%);
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    transition: var(--transition);
+}
+
+.navigationTop ul a:hover::after {
+    width: 100px;
+}
+
+.rmDescription {
+    margin-top: -160px;
+}
+
+.rmDescriptionDes img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.rmDescriptionDes h2 {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 35px;
+    color: #ddff00;
+}
+
+
+/*------------------Find your deream home quote------------------*/
+
+.rmDescriptionDes h3 {
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+    background: rgba(255, 255, 255, 0.2);
+    width: 400px;
+    margin: 35px auto;
+    text-align: center;
+}
+
+blockquote {
+    font-size: 20px;
+    font-weight: 300;
+    opacity: 0.9;
+    width: 60vw;
+    margin: 45px auto 15px auto;
+    text-align: center;
+}
+
+blockquote span {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #ddff00;
+    font-weight: 300;
+    letter-spacing: 5px;
+    display: block;
+}
+
+.socialMediaButtons {
+    width: 350px;
+    margin: 40px auto 0 auto;
+    padding-bottom: 30px;
+}
+
+.socialMediaButtons ul a {
+    color: white;
+    font-size: 30px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.socialMediaButtons ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.socialMediaButtons ul a:hover {
+    background: black;
+    border-color: #ddff00;
+}
+
+
+/*-------------------index-------------------------*/
+
+
+/*Main-Page*/
+
+.mainPagePart {
+    margin: 40px 0;
+    min-height: 100vh;
+}
+
+.mainPagePartL {
+    height: 100vh;
+    background: url("images/A18.jpg") center/cover no-repeat;
+    box-shadow: transparent;
+    -webkit-box-shadow: 0px 0px 14px -1px transparent;
+    -moz-box-shadow: 0px 0px 14px -1px transparent;
+}
+
+.mainPagePartL section {
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+}
+
+.mainPagePartL section h3 {
+    font-size: 28px;
+    opacity: 0.9;
+}
+
+.mainPagePartL section p {
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+.mainPagePartR h3 {
+    color: var(--lightGrey);
+}
+
+.mainPagePartR>h3 {
+    text-align: center;
+}
+
+.mainPagePartR p {
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.mainPagePartDescrip {
+    margin: 50px 0;
+}
+
+.houseImages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+}
+
+.houseImages1 {
+    background: url("images/A7.jpg") center/cover no-repeat;
+    height: 400px;
+    transition: var(--transition);
+}
+
+.houseImages2 {
+    background: url("images/A14.jpg") center/cover no-repeat;
+    height: 400px;
+    transition: var(--transition);
+}
+
+.houseImages section:hover {
+    box-shadow: red;
+    -webkit-box-shadow: red;
+    -moz-box-shadow: red;
+}
+
+
+/*-------------------------Apartments-------------------------*/
+
+.apartmentsPart {
+    margin: 40px 0;
+}
+
+.apartmentsPart h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.apartmentsPart span {
+    color: var(--darkGrey);
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.apartmentImages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.apartmentImages>section {
+    position: relative;
+}
+
+.overlayImages {
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    background: rgba(255, 255, 255, 0.6);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.apartmentImages>section:hover .overlayImages {
+    opacity: 1;
+}
+
+
+/*---------------------gallery------------------------------*/
+
+.section-three {
+    margin: 40px 0;
+}
+
+.single-img {
+    position: relative;
+    margin: 10px;
+}
+
+.single-img-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    padding: 5px 30px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.single-img-content h3 {
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+
+/*--------------------------blog---------------------------*/
+
+.propertyDescriptionPart {
+    margin: 40px 0;
+}
+
+.descriptionBox {
+    margin: 40px 0;
+}
+
+.descriptionBoxDescription {
+    padding: 25px;
+    background: #f7f7f7;
+}
+
+.descriptionBox span {
+    display: block;
+}
+
+.propertyLabel {
+    background: lightgrey;
+    width: 140px;
+    border-radius: 5px;
+    padding: 5px 0;
+    color: #737170;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.dateAndViewed {
+    font-size: 14px;
+    color: var(--dark);
+    margin-top: 16px;
+}
+
+.descriptionBoxPriceBeds {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.descriptionBoxAddr {
+    font-weight: 300;
+}
+
+
+/*-------------------contact.html---------------------*/
+
+.contactBoxes {
+    margin: 40px 0px;
+}
+
+.contactBoxes .container section {
+    margin: 20px 0;
+}
+
+.contact-top {
+    text-align: center;
+}
+
+.contact-top h3 {
+    font-size: 28px;
+}
+
+.contact-top p {
+    font-weight: 300;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.contactBoxProperties section {
+    text-align: center;
+    padding: 25px 0;
+    background: var(--dark);
+    color: #fff;
+}
+
+.contactBoxProperties section span {
+    display: block;
+}
+
+.contactBoxIconProperties {
+    font-size: 30px;
+}
+
+.contactBoxProperties section span:nth-child(2) {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contactBoxProperties section p {
+    font-weight: 300;
+    opacity: 0.7;
+}
+
+.contactBoxDown {
+    margin-top: 50px!important;
+}
+
+
+/*----------------------Footer----------------------*/
+
+.footer {
+    background: linear-gradient(to right, #676262 0%, #000000 70%);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footerDescription>section {
+    margin: 40px 0;
+}
+
+.footerDescription h2 {
+    color: #ddff00;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 7px;
+}
+
+.footerDescription p {
+    opacity: 0.7;
+}
+
+
+/*-----------------Email Area Size , Colors , Fonts etc----------------------*/
+
+.updates {
+    background: #000;
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+}
+
+.updates i {
+    font-size: 26px;
+    flex: 10%;
+    display: block;
+}
+
+.updates input {
+    flex: 60%;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    padding: 0 5px;
+    outline: 0;
+    color: #fff;
+}
+
+.updates button {
+    flex: 30%;
+    font-size: 16px;
+    padding: 15px 0;
+    font-weight: bold;
+    background: linear-gradient(to left, #54e807 0%, #dbff00 50%);
+    border: none;
+    transition: linear-gradient(to right, #54e807 0%, #dbff00 50%);
+    cursor: pointer;
+}
+
+.updates button:hover {
+    background: linear-gradient(to right, #54e807 0%, #dbff00 50%);
+}
+
+.footer>p {
+    text-align: center;
+    font-weight: 520px;
+    font-size: 15px;
+    color: black;
+    background: linear-gradient(to right, #54e807 0%, #dbff00 50%);
+}
+
+
+/*---------------------- Media Queries ----------------------------*/
+
+@media screen and (min-width: 678px) {
+    .contactBoxProperties {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .apartmentImages {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .descriptionBox-wrapper-sm {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .navigationPart {
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbutton {
+        display: none;
+    }
+    .navigationLogo {
+        flex: 0 0 10%;
+        background: none;
+    }
+    .navigationTop {
+        flex: 0 1 80%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        transition: transform 0s ease;
+        transform: translateY(0);
+        background: transparent;
+    }
+    .navigationTop ul {
+        display: flex;
+    }
+    .navigationTop ul li {
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    .about {
+        margin-top: 0;
+    }
+    .searchButton {
+        flex: 0 0 10%;
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        cursor: pointer;
+        color: #ddff00;
+        transition: var(--transition);
+    }
+    .searchButton i:hover {
+        transform: scale(1.2);
+    }
+    .contactBoxProperties {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .contactBoxDown {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 40px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .mainPagePart .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 50px;
+    }
+    .mainPagePartL {
+        align-self: center;
+    }
+    .mainPagePartDescrip {
+        margin-top: 0;
+    }
+    .mainPagePartL {
+        height: 100%;
+    }
+    .descriptionBox-wrapper-lg {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+    .footerDescription {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .footerDescription>section {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .descriptionBox-wrapper-sm {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+/*---------------------extra-smallscreen------------------------*/
+
+@media screen and (max-width: 500px) {
+    .header {
+        padding-bottom: 30px;
+    }
+    .socialMediaButtons {
+        display: none;
+    }
+    .rmDescriptionDes h3 {
+        width: 100%;
+    }
+    .rmDescriptionDes blockquote {
+        font-size: 16px;
+        width: 100%;
+    }
+    .updates {
+        width: 280px;
+    }
+    .updates i {
+        display: none;
+    }
+    .updates input {
+        width: 100%;
+    }
+    .updates button {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    h2 {
+        font-size: 30px!important;
+    }
+    h3 {
+        font-size: 20px!important;
+    }
+    p {
+        font-size: 15px;
+    }
+    .button {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+    .houseImages {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+    }
+    .searchBar {
+        background: red;
+        background-size: 100% 1000%;
+        width: 100%;
+    }
+    .rawX {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+}
+
+
+/*-------------------IMAGE SLIDER--------------------*/
+
+#slider {
+    width: 50%;
+    height: 600px;
+    margin: 50px auto;
+    box-shadow: transparent;
+    position: relative;
+}
+
+section#slider {
+    overflow: hidden;
+    border: 5px solid transparent;
+}
+
+section#slider figure img {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+section#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    transition: 1s ease-in-out;
+}
+
+.nextButton,
+.prevButton {
+    position: absolute;
+    top: 45%;
+    cursor: pointer;
+    color: black;
+    background: transparent;
+    padding: 20px;
+    font-size: 50px;
+    border: none;
+}
+
+.prevButton {
+    left: 0px;
+}
+
+.nextButton {
+    right: 0px;
+}
+
+.price-range-block {
+    margin: 60px;
+}
+
+.sliderText {
+    width: 40%;
+    margin-bottom: 30px;
+    border-bottom: 2px solid red;
+    padding: 10px 0 10px 0px;
+    font-weight: bold;
+}
+
+.ui-slider-horizontal {
+    width: 500px;
+    height: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.ui-widget-header {
+    background: #202020;
+}
+
+.ui-widget.ui-widget-content {
+    border: 2px solid #202020;
+    background: transparent;
+}
+
+.ui-slider-handle.ui-corner-all.ui-state-default {
+    width: 30px;
+    height: 30px;
+    top: -12px;
+    border-radius: 100%;
+    background: #202020;
+    border: 1px solid #202020;
+}
+
+.price-range-search {
+    background-color: #202020;
+    color: #fff;
+    border: 1px solid #202020;
+    display: inline-block;
+    height: 32px;
+    border-radius: 5px;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.price-range-field {
+    width: 100px;
+    height: 26px;
+    background-color: #202020;
+    border: 1px solid #6e6666;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.search-results-block {
+    position: relative;
+    display: block;
+    clear: both;
+    margin-top: 20px;
+}
+
+
+/*-------------------Drag & Drop--------------------*/
+
+#gallery {
+    float: left;
+    width: 65%;
+    min-height: 12em;
+}
+
+.gallery li {
+    float: left;
+    width: 100px;
+    padding: 0.4em;
+    margin: 0 0.5em 0.5em 0;
+    text-align: center;
+}
+
+.items {
+    color: green;
+}
+
+.gallery li h5 {
+    margin: 0 0 0.5em;
+    cursor: move;
+}
+
+.gallery li a {
+    float: right;
+}
+
+.gallery li a.ui-icon-zoomin {
+    float: left;
+}
+
+.gallery li img {
+    width: 100%;
+    cursor: move;
+}
+
+#trash {
+    color: transparent;
+    float: right;
+    width: 33%;
+    min-height: 20em;
+    padding: 1%;
+}
+
+#trash h4 {
+    color: black;
+    line-height: 18px;
+    margin: 0 0 0.5em;
+}
+
+#trash h4 .ui-icon {
+    color: black;
+    float: left;
+}

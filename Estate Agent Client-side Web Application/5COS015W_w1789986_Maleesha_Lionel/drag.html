@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> RIGHT|MOVE</title>
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jQueryA.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <section class="navigationPart">
+            <section class="navigationLogo">
+                <span class="rmLogo">
+                        RIGHT|MOVE
+                    </span>
+                <span class="navbutton flex">
+                        <i class = "fas fa-bars"></i>
+                    </span>
+            </section>
+
+            <nav class="navigationTop">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Properties</a></li>
+                    <li><a href="gallery1.html">Explore</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="FindAProperty.html">Search</a></li>
+                </ul>
+            </nav>
+            <span class="searchButton">
+
+                </span>
+        </section>
+
+        <section class="container rmDescription">
+            <section class="rmDescriptionDes">
+                <br><br><br><br><br><br>
+                <h2>RIGHT|MOVE</h2>
+                <h3>Find your dream home</h3>
+                <blockquote>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                    <span>RIGHT|MOVE</span>
+                </blockquote>
+
+                <section class="searchBar">
+                    <section class="searchBarBody">
+                        <section class="raw1">
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+            <section class="socialMediaButtons">
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/"><i class = "fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/"><i class = "fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com/"><i class = "fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/"><i class = "fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </header>
+
+    <section class="ui-widget ui-helper-clearfix">
+        <ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix">
+            <li class="ui-widget-content ui-corner-tr">
+                <h5 class="ui-widget-header">High Tatras</h5>
+                <img src="images/A31.jpg" alt="PROPERTY-1" width="96" height="72">
+                <a href="https://jqueryui.com/resources/demos/droppable/images/high_tatras.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
+                <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-trash">Delete image</a>
+            </li>
+            <li class="ui-widget-content ui-corner-tr">
+                <h5 class="ui-widget-header">High Tatras 2</h5>
+                <img src="https://jqueryui.com/resources/demos/droppable/images/high_tatras2_min.jpg" alt="PROPERTY-2" width="96" height="72">
+                <a href="https://jqueryui.com/resources/demos/droppable/images/high_tatras2.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
+                <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-trash">Delete image</a>
+            </li>
+            <li class="ui-widget-content ui-corner-tr">
+                <h5 class="ui-widget-header">High Tatras 3</h5>
+                <img src="https://jqueryui.com/resources/demos/droppable/images/high_tatras3_min.jpg" alt="PROPERTY-3" width="96" height="72">
+                <a href="https://jqueryui.com/resources/demos/droppable/images/high_tatras3.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
+                <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-trash">Delete image</a>
+            </li>
+            <li class="ui-widget-content ui-corner-tr">
+                <h5 class="ui-widget-header">High Tatras 4</h5>
+                <img src="https://jqueryui.com/resources/demos/droppable/images/high_tatras4_min.jpg" alt="PROPERTY-4" width="96" height="72">
+                <a href="https://jqueryui.com/resources/demos/droppable/images/high_tatras4.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
+                <a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-trash">Delete image</a>
+            </li>
+        </ul>
+        <section id="trash" class="ui-widget-content ui-state-default">
+            <h4 class="ui-widget-header">
+                Drop Items:<span id="items">0</span>
+                <!-- <span class="ui-icon ui-icon-trash"></span> Trash -->
+            </h4>
+        </section>
+        <button type="button" id="save">Save</button>
+        <button type="button" id="clear">Clear</button>
+        <p>Stored Items</p>
+        <ul id="storedItems">
+        </ul>
+
+        <script>
+            $(function() {
+                // there's the gallery and the trash
+                var $gallery = $("#gallery"),
+                    $trash = $("#trash"),
+                    $items = $("#items");
+
+                // let the gallery items be draggable
+                $("li", $gallery).draggable({
+                    cancel: "a.ui-icon", // clicking an icon won't initiate dragging
+                    revert: "invalid", // when not dropped, the item will revert back to its initial position
+                    containment: "document",
+                    helper: "clone",
+                    cursor: "move"
+                });
+
+                // let the trash be droppable, accepting the gallery items
+                $trash.droppable({
+                    accept: "#gallery > li",
+                    activeClass: "ui-state-highlight",
+                    drop: function(event, ui) {
+                        deleteImage(ui.draggable);
+                    }
+                });
+
+                // let the gallery be droppable as well, accepting items from the trash
+                $gallery.droppable({
+                    accept: "#trash li",
+                    activeClass: "custom-state-active",
+                    drop: function(event, ui) {
+                        recycleImage(ui.draggable);
+                    }
+                });
+
+                // image deletion function
+                var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
+
+                function deleteImage($item) {
+                    var obj = cloneObject($item);
+                    var $list = $("ul", $trash).length ?
+                        $("ul", $trash) :
+                        $("<ul class='gallery ui-helper-reset'/>").appendTo($trash);
+                    obj.find("a.ui-icon-trash").remove();
+                    obj.append(recycle_icon).appendTo($list).fadeIn(function() {
+                        obj
+                            .animate({
+                                width: "48px"
+                            })
+                            .find("img")
+                            .animate({
+                                height: "36px"
+                            });
+                    });
+                    $items.text($("li", $list).length);
+                }
+
+                // image recycle function
+                var trash_icon = "<a href='link/to/trash/script/when/we/have/js/off' title='Delete this image' class='ui-icon ui-icon-trash'>Delete image</a>";
+
+                function recycleImage($item) {
+
+                    $item.fadeOut(function() {
+                        $item.remove();
+                        $items.text($("li", $("ul", $trash)).length);
+                    });
+                }
+
+                // image preview function, demonstrating the ui.dialog used as a modal window
+                function viewLargerImage($link) {
+                    var src = $link.attr("href"),
+                        title = $link.siblings("img").attr("alt"),
+                        $modal = $("img[src$='" + src + "']");
+
+                    if ($modal.length) {
+                        $modal.dialog("open");
+                    } else {
+                        var img = $("<img alt='" + title + "' width='384' height='288' style='display: none; padding: 8px;' />")
+                            .attr("src", src).appendTo("body");
+                        setTimeout(function() {
+                            img.dialog({
+                                title: title,
+                                width: 400,
+                                modal: true
+                            });
+                        }, 1);
+                    }
+                }
+
+                function cloneObject($item) {
+                    var obj = $item.clone();
+                    obj.draggable({
+                        cancel: "a.ui-icon",
+                        revert: "invalid",
+                        containment: "document",
+                        helper: "clone",
+                        cursor: "move"
+                    });
+                    obj.click(function(event) {
+                        var $item = $(this),
+                            $target = $(event.target);
+                        if ($target.is("a.ui-icon-trash")) {
+                            deleteImage($item);
+                        } else if ($target.is("a.ui-icon-zoomin")) {
+                            viewLargerImage($target);
+                        } else if ($target.is("a.ui-icon-refresh")) {
+                            recycleImage($item);
+                        }
+
+                        return false;
+                    });
+
+                    return obj;
+                }
+
+                // resolve the icons behavior with event delegation
+                $("ul.gallery > li").click(function(event) {
+                    var $item = $(this),
+                        $target = $(event.target);
+                    if ($target.is("a.ui-icon-trash")) {
+                        deleteImage($item);
+                    } else if ($target.is("a.ui-icon-zoomin")) {
+                        viewLargerImage($target);
+                    } else if ($target.is("a.ui-icon-refresh")) {
+                        recycleImage($item);
+                    }
+
+                    return false;
+                });
+
+                $("button#save").click(function() {
+                    var items = $("li", $("ul", $trash));
+                    for (var i = 0, len = items.length; i < len; i++) {
+                        var item = items[i];
+                        var element = {
+                            title: $("h5", item).text(),
+                            img: $("img", item).attr("src")
+                        }
+                        localStorage.setItem(i, JSON.stringify(element));
+                    }
+                    // 保存されたことを確認する
+                    for (var i = 0, len = localStorage.length; i < len; i++) {
+                        var element = JSON.parse(localStorage.getItem(i));
+                        $("ul#storedItems").append("<li> Title : " + element.title + "　File : " + element.img);
+                    }
+                });
+
+                $("button#clear").click(function() {
+                    localStorage.clear();
+                    $("ul#storedItems li").remove();
+                });
+            });
+
+            /*  function updateCount(dragId, val) {
+                var cnt = numOfEachId[dragId] + val;
+                numOfEachId[dragId] = cnt;
+                var obj = $('li#'+dragId, $("ul", $trash));
+                $('.cc1', obj).text(cnt);
+              }*/
+        </script>
+    </section>
+
+    <footer class="footer">
+        <section class="footerDescription container">
+            <section>
+                <h2> RIGHT|MOVE</h2>
+                <p>Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime</p>
+            </section>
+            <section>
+                <h3>UPDATES</h3>
+                <p>Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas.</p>
+
+                <section class="updates">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Email Address">
+                    <button type="send">SEND</button>
+                </section>
+            </section>
+        </section>
+        <p> MALEESHA LIONEL / W1789986 / 2019742 </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+</html>
